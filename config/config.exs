@@ -7,6 +7,9 @@
 # General application configuration
 import Config
 
+# to add other timezones other than UTC
+config :elixir, :time_zone_database, Tzdata.TimeZoneDatabase
+
 config :timezone_converter,
   ecto_repos: [TimezoneConverter.Repo]
 

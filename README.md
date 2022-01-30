@@ -1,5 +1,14 @@
 # TimezoneConverter
 
+## Implementation procedure
+
+ 1. Created the phoenix app
+ 2. attached Tzdata
+ 3. Created migrations
+  - create timezone table
+  - removed timestamps
+ 4. Added seeding
+
 Create a web application that converts entered time between chosen time zones. The goal of
 the task is to demonstrate the ability to work with Phoenix and Ecto.
 

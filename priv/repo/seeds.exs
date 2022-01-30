@@ -9,3 +9,11 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+alias TimezoneConverter.Models.TimeZone, as: TZ
+alias TimezoneConverter.Repo
+
+# reset table
+Repo.delete_all(TZ)
+
+timezones = Enum.map(Tzdata.zone_list(), &%{name: &1})
+{594, _} = Repo.insert_all(TZ, timezones)

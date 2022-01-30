@@ -3,7 +3,7 @@ import Config
 # Configure your database
 config :timezone_converter, TimezoneConverter.Repo,
   username: "postgres",
-  password: "postgres",
+  password: "",
   hostname: "localhost",
   database: "timezone_converter_dev",
   show_sensitive_data_on_connection_error: true,
