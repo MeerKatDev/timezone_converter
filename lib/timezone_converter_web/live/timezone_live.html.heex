@@ -1,0 +1,46 @@
+<style>
+  a { cursor: pointer; }
+  td, th { text-align: center; }
+</style>
+
+<section>
+	<form action="#" phx-change="update_manual_time">
+		<label for="selected_time">Enter time: </label>
+	  <%= text_input :time, :selected_time, value: @current_time, "phx-focus": "set_manual_time" %>
+	  <a phx-click="use_current_time">Use current time</a>
+	</form>
+
+
+	<form action="#" phx-submit="add">
+		<label for="timezone_name">Select city</label>
+		<%= text_input :timezone, :timezone_name, placeholder: "Write list name", list: "timezones" %>
+		<%= submit "Add", phx_disable_with: "Adding..." %>
+	</form>
+  <p>My timezones</p>
+  <table>
+    <thead>
+      <tr>
+        <th>City</th>
+        <th>Time</th>
+        <th>Timezone</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+  		<%= for %{name: name, abbr: abbr, time: time} <- @selected_tzs do %>
+    	<tr>
+    		<td><%= name %></td>
+    		<td><%= time %></td>
+    		<td><%= abbr %></td>
+    		<td><a phx-click="unselect" phx-value-ref={name}>&#10060;</a></td>
+    	</tr>
+  		<% end %>
+    </tbody>
+  </table>
+</section>
+
+<datalist id="timezones">
+  <%= for item <- @timezones do %>
+  <option value={item.name} />
+  <% end %>
+</datalist>

@@ -18,6 +18,7 @@ defmodule TimezoneConverterWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    live "/timezone", Live.TimezoneLive, :index
   end
 
   # Other scopes may use custom stacks.

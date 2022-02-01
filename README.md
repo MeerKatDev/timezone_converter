@@ -1,5 +1,12 @@
 # TimezoneConverter
 
+## Instructions to run
+```
+mix deps.get
+mix ecto.create # need to change the db info before
+mix ecto.migrate
+mix phx.server
+```
 ## Implementation procedure
 
  1. Created the phoenix app
@@ -8,6 +15,8 @@
   - create timezone table
   - removed timestamps
  4. Added seeding
+ 5. Added implementation
+ 6. TODO - test?
 
 Create a web application that converts entered time between chosen time zones. The goal of
 the task is to demonstrate the ability to work with Phoenix and Ecto.
