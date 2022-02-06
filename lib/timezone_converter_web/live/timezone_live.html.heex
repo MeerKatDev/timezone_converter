@@ -5,11 +5,10 @@
 
 <section>
 	<form action="#" phx-change="update_manual_time">
-		<label for="selected_time">Enter time: </label>
-	  <%= text_input :time, :selected_time, value: @current_time, "phx-focus": "set_manual_time" %>
-	  <a phx-click="use_current_time">Use current time</a>
+		<label for="selected-time">Enter time: </label>
+	  <%= text_input :time, :selected_time, id: "selected-time", value: @current_time, phx_focus: "set_manual_time" %>
+	  <a id="btn-current-time" phx-click="use_current_time">Use current time</a>
 	</form>
-
 
 	<form action="#" phx-submit="add">
 		<label for="timezone_name">Select city</label>
