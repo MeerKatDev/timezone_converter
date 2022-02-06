@@ -1,5 +1,7 @@
 # TimezoneConverter
 
+This was a good environment to make some experience with LiveView testing
+
 ## Instructions to run
 ```
 mix deps.get
@@ -9,29 +11,29 @@ mix phx.server
 ```
 ## Implementation procedure
 
- 1. Created the phoenix app
- 2. attached Tzdata
- 3. Created migrations
-  - create timezone table
-  - removed timestamps
- 4. Added seeding
- 5. Added implementation
- 6. TODO - test?
+  1. Created the phoenix app
+  2. Attached Tzdata
+  3. Created migrations
+  4. Added seeding
+  5. Added implementation
+  6. Testing
+
+## Assignment
 
 Create a web application that converts entered time between chosen time zones. The goal of
 the task is to demonstrate the ability to work with Phoenix and Ecto.
 
 ## Requirements
 
- - The application asks to enter the needed time in the input field.
- - By default it is pre-filled with current time which is updating live.
- - Users can also enter custom time, then the time doesn't update anymore.
- - Below the input field there is a link to use "current time".
- - Below the user can also add cities. In this example the user has added Hamburg and Beijing.
- - There is a button to delete cities from the list.
- - To add a new city, the user can enter a city name in the field, which acts as auto-complete for supported cities in the application.
- - The list of cities and their time zones comes from a database table.
- - In the list of cities, the time should also auto-update if the user is converting current time.
+  - The application asks to enter the needed time in the input field.
+  - By default it is pre-filled with current time which is updating live.
+  - Users can also enter custom time, then the time doesn't update anymore.
+  - Below the input field there is a link to use "current time".
+  - Below the user can also add cities. In this example the user has added Hamburg and Beijing.
+  - There is a button to delete cities from the list.
+  - To add a new city, the user can enter a city name in the field, which acts as auto-complete for supported cities in the application.
+  - The list of cities and their time zones comes from a database table.
+  - In the list of cities, the time should also auto-update if the user is converting current time.
 
 ## Technical requirements
   1. Write the application with Phoenix and Ecto. For frontend you can use anything you like (LiveView, Channels, any JS framework). You are free to use any dependencies needed.
